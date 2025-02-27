@@ -42,5 +42,5 @@ for _, row in data.iterrows():
     ).add_to(m)
 
 # Display map in Streamlit
-# folium_static(m)
-streamlit_folium(m)
+folium_static(m)
+# streamlit_folium(m)
