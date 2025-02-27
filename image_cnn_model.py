@@ -12,7 +12,9 @@ from streamlit_folium import folium_static
 model = keras.models.load_model("poverty_prediction_model.h5")
 
 # Load poverty dataset
-data = pd.read_csv("kenya_poverty_data.csv")
+df = pd.read_csv("kenya_poverty_data.csv")
+
+data = df.sample(n=5000, random_state=42)
 
 # Normalize the input features
 scaler = StandardScaler()
