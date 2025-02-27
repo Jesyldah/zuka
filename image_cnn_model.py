@@ -32,7 +32,7 @@ m = folium.Map(location=[0.0236, 37.9062], zoom_start=6)
 
 # Add poverty predictions as colored circles
 for _, row in data.iterrows():
-    color = "red" if row["poverty_prediction"] > 0.7 else "orange" if row["poverty_prediction"] > 0.4 else "green"
+    color = "red" if row["poverty_prediction"] > 0.99 else "blue" if row["poverty_prediction"] > 0.6 else "green"
     folium.CircleMarker(
         location=[row["latitude"], row["longitude"]],
         radius=5,
